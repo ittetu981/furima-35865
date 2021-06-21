@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="m21VNch-wr7LKslH6Mwh" name="ページ1">
-        <mxGraphModel dx="977" dy="916" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="312" dy="916" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -10,7 +10,7 @@
                 <mxCell id="394" value="email(strring型,NOT NULL)&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="393">
                     <mxGeometry y="26" width="260" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="395" value="encrypted_password(string型,NOT NULL)&#10;&#10;name(string型,NOT NULL)&#10;&#10;credit caed(string型,NOT NULL)&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="393">
+                <mxCell id="395" value="encrypted_password(string型,NOT NULL)&#10;&#10;name(string型,NOT NULL)&#10;&#10;nickname(string型,NOT NULL)&#10;&#10;birthday(string型,NOT NULL)&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="393">
                     <mxGeometry y="56" width="260" height="144" as="geometry"/>
                 </mxCell>
                 <mxCell id="503" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;exitX=1.012;exitY=0.042;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=none;entryX=1.009;entryY=0.147;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">

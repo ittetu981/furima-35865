@@ -25,16 +25,16 @@
                 <mxCell id="514" value="product _name(string型,NOT NULL)&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="513">
                     <mxGeometry y="26" width="270" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="516" value="description_of_item(text型,NOTNULL)&#10;&#10;category_id(integer型,NOT NULL)&#10;&#10;product_status_id(integer型,NOT NULL)&#10;&#10;delivery_charge_id(integer型,NOT NULL)&#10;&#10;shipment_source_id(integer型,NOT NULL)&#10;&#10;price(integer型,NOT NULL)&#10;&#10;users_nickname(references型,NOT NULL)&#10;&#10;shipping_charges(string型,NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="513">
+                <mxCell id="516" value="description_of_item(text型,NOTNULL)&#10;&#10;category_id(integer型,NOT NULL)&#10;&#10;product_status_id(integer型,NOT NULL)&#10;&#10;delivery_charge_id(integer型,NOT NULL)&#10;&#10;shipment_source_id(integer型,NOT NULL)&#10;&#10;price(integer型,NOT NULL)&#10;&#10;user(references型,NOT NULL)&#10;&#10;shipping_charges(string型,NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="513">
                     <mxGeometry y="56" width="270" height="234" as="geometry"/>
                 </mxCell>
                 <mxCell id="517" value="purchaseasテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;sketch=1;strokeColor=#f0f0f0;" vertex="1" parent="1">
                     <mxGeometry x="610" y="180" width="300" height="86" as="geometry"/>
                 </mxCell>
-                <mxCell id="518" value="users_nickname(references型,NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="517">
+                <mxCell id="518" value="user(references型,NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="517">
                     <mxGeometry y="26" width="300" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="520" value="items_product _name(references型,NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="517">
+                <mxCell id="520" value="item(references型,NOT NULL)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="517">
                     <mxGeometry y="56" width="300" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="521" value="shipping addressテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;sketch=1;strokeColor=#f0f0f0;" vertex="1" parent="1">
@@ -79,7 +79,7 @@
                         <mxPoint x="590" y="550" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="524" value="municipality(string型,NOT NULL)&#10;&#10;shipment_source_id(integer型,NOT NULL)&#10;&#10;shipping_days(string型,NOT NULL)&#10;&#10;buyer_name(string型,NOT NULL&#10;&#10;address(string型 ,NOTNULL)&#10;&#10;building_name(string型)&#10;&#10;phone_number(string型,NOT NULL)&#10;&#10;purchase(references型,NOT NULL)&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="1">
+                <mxCell id="524" value="municipality(string型,NOT NULL)&#10;&#10;shipment_source_id(integer型,NOT NULL)&#10;&#10;shipping_day(string型,NOT NULL)&#10;&#10;buyer_name(string型,NOT NULL&#10;&#10;address(string型 ,NOTNULL)&#10;&#10;building_name(string型)&#10;&#10;phone_number(string型,NOT NULL)&#10;&#10;purchase(references型,NOT NULL)&#10;&#10;&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="1">
                     <mxGeometry x="620" y="620" width="300" height="214" as="geometry"/>
                 </mxCell>
             </root>

@@ -27,7 +27,7 @@
 |product_status_id      |integer   |null:false                   |
 |shipment_source_id     |integer   |null:false                   |
 |price                  |integer   |null:false                   |
-|nickname               |references|null:false, foreign_key: true|
+|users_nickname         |references|null:false, foreign_key: true|
 |shipping_charge_id     |integer   |null:false                   |
 
 ### Association
@@ -40,9 +40,8 @@
 
 |Column                 |Type      |Options                      |
 |-----------------------|----------|-----------------------------|
-|nickname               |references|null:false, foreign_key: true|
-|product_name           |references|null:false, foreign_key: true|
-
+|users_nickname         |references|null:false, foreign_key: true|
+|users_nickname         |references|null:false, foreign_key: true|
 ### Association
 
 - belongs_to :user
@@ -52,15 +51,17 @@
 
 ## shipping_addressテーブル
 
-|Column                 |Type   |Options                 |
-|-----------------------|-------|------------------------|
-|postal_code            |string |null:false              |
-|shipment_source_id     |integer|null:false              |
-|municipality           |string |null:false              |
-|shipping_days          |string |null:false              |
-|address                |string |null:false              |
-|building_name          |string |null                    |
-|phone_number           |string |null:false              |
+|Column                 |Type      |Options                      |
+|-----------------------|----------|-----------------------------|
+|postal_code            |string    |null:false                   |
+|shipment_source_id     |integer   |null:false                   |
+|municipality           |string    |null:false                   |
+|shipping_days          |string    |null:false                   |
+|address                |string    |null:false                   |
+|building_name          |string    |                             |
+|phone_number           |string    |null:false                   |
+|purchase               |references|null:false, foreign_key: true|
+
 
 ### Association
 

@@ -6,15 +6,15 @@
 |encrypted_password      |string|null:false              |
 |full_width_surname      |string|null:false              |
 |surname_yomigana        |string|null:false              |
-|name_yomigana           |string¥null:false              |
+|name_yomigana           |string|null:false              |
 |full_width_name         |string|null:false              |
 |nickname                |string|null:false              |
 |birthday                |date  |null:false              |
 
 ### Association
 
-- has many :items
-- has many :purchases
+- has_many :items
+- has_many :purchases
 
 ## itemsテーブル
 
@@ -32,7 +32,6 @@
 
 ### Association
 
-- has_one :item
 - has_one :purchase
 - belongs_to :user
 

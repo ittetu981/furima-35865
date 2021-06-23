@@ -55,7 +55,6 @@
 |postal_code            |string    |null:false                   |
 |shipment_source_id     |integer   |null:false                   |
 |municipality           |string    |null:false                   |
-|shipping_day           |string    |null:false                   |
 |address                |string    |null:false                   |
 |building_name          |string    |                             |
 |phone_number           |string    |null:false                   |

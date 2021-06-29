@@ -3,5 +3,10 @@ class ItemsController < ApplicationController
   end
 
   def new
+    @item = Item.new
+  end
+
+  def create
+    Item.create(itme_params)
   end
 end

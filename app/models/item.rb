@@ -1,4 +1,6 @@
 class Item < ApplicationRecord
+
+
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
 
@@ -11,11 +13,11 @@ class Item < ApplicationRecord
   validates :shipment_source_id, presence: true
   validates :price, presence: true
   validates :user, presence: true
-  validates :shipping_charge_id, presence: true
+  validates :shipping_time_id, presence: true
 
 
   has_one :purchase
   belongs_to :user
   has_one_attached :image
-
+  
 end

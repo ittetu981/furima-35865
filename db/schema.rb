@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_28_132229) do
+ActiveRecord::Schema.define(version: 2021_06_28_133730) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,16 +33,26 @@ ActiveRecord::Schema.define(version: 2021_06_28_132229) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "category_id", null: false
+    t.integer "delivery_charge_id", null: false
+    t.integer "product_status_id", null: false
+    t.integer "shipment_source_id", null: false
+    t.integer "shipping_time_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "product_name", null: false
     t.text "description_of_item", null: false
-    t.integer "category", null: false
-    t.integer "delivery_charge", null: false
-    t.integer "product_status", null: false
-    t.integer "shipment_source", null: false
+    t.integer "category_id", null: false
+    t.integer "delivery_charge_id", null: false
+    t.integer "product_status_id", null: false
+    t.integer "shipment_source_id", null: false
     t.integer "price", null: false
     t.bigint "user_id", null: false
-    t.integer "shipping_charge", null: false
+    t.integer "shipping_time_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_items_on_user_id"

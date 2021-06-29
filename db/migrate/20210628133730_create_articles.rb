@@ -5,7 +5,7 @@ class CreateArticles < ActiveRecord::Migration[6.0]
       t.integer      :delivery_charge_id       , null: false
       t.integer      :product_status_id        , null: false
       t.integer      :shipment_source_id       , null: false
-      t.integer      :shipping_time_id       , null: false
+      t.integer      :shipping_time_id         ,null: false
       t.timestamps
     end
   end

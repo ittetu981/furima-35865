@@ -1,4 +1,4 @@
-class shipment_source < ActiveHash::Base
+class ShipmentSource < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' },
     { id: 2, name: '北海道' },
@@ -46,7 +46,7 @@ class shipment_source < ActiveHash::Base
     { id: 45, name: '熊本' },
     { id: 46, name: '大分' },
     { id: 47, name: '宮崎' },
-    { id: 48, name: '鹿児島' }
+    { id: 48, name: '鹿児島' },
     { id: 49, name: '沖縄' }
   ]
   include ActiveHash::Associations

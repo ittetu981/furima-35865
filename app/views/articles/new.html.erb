@@ -1,11 +1,3 @@
 <%= form_with model: @article, url:articles_path, local: true do |f| %>
   <div class="article-box">
-
-    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
-    <%= f.collection_select(:delivery_charge_id, Delivery_chargey.all, :id, :name, {}, {class:"delivery_charge-select"}) %>
-    <%= f.collection_select(:product_status_id, Product_status.all, :id, :name, {}, {class:"product_status-select"}) %>
-    <%= f.collection_select(:shipment_source_id, Shipment_source.all, :id, :name, {}, {class:"shipment_source-select"}) %>
-    <%= f.collection_select(:shipping_time_id, Shipping_time.all, :id, :name, {}, {class:"shipping_time-select"}) %>
-    <%= f.submit "投稿する" ,class:"btn" %>
-  </div>
 <% end %>

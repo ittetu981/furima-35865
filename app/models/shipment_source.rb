@@ -50,6 +50,6 @@ class ShipmentSource < ActiveHash::Base
     { id: 48, name: '沖縄' }
   ]
   include ActiveHash::Associations
-  has_many :articles
+  has_many :items
 
 end

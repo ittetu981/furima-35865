@@ -77,6 +77,54 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipment source can't be blank")
       end
+
+      it 'カテゴリーのidに1が選択されている場合は出品できない' do
+        @item.category_id = 1
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Category can't be blank")
+      end
+
+      it '商品の状態のidに1が選択されている場合は出品できない' do
+        @item.product_status_id = 1
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Product status can't be blank")
+      end
+
+      it '配送料の負担のidに1が選択されている場合は出品できない' do
+        @item.delivery_charge_id = 1
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Delivery charge can't be blank")
+      end
+
+      it '発送元の地域のidに1が選択されている場合は出品できない' do
+        @item.shipment_source_id = 1
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Shipment source can't be blank")
+      end
+
+      it '発想までの日数が空では出品できないこと' do
+        @item.shipping_time_id = ''
+        @item.valid?
+        expect(@item.errors.full_messages).to include("shipping time can't be blank")
+      end
+
+      it '発想までの日数のidに1が選択されている場合は出品できない' do
+        @item.shipping_time_id = 1
+        @item.valid?
+        expect(@item.errors.full_messages).to include("shipping time can't be blank")
+      end
+
+      it '商品価格が半角英字のみでは出品できない' do
+        @item.price = 'aaa'
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price is not a number")
+      end
+
+      it '商品価格が全角文字では出品できない'
+      @item.price = 'ａａａａ'
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price is not a number")
+      end
     end
   end
 end

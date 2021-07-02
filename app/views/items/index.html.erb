@@ -142,9 +142,10 @@
 
         </div>
         <div class='item-info'>
+        <% @item.each do |item|%>
           <h3 class='item-name'>
             <%= "商品名" %>
-          </h3>
+          </h3> 
           <div class='item-price'>
             <span><%= "販売価格" %>円<br><%= '配送料負担' %></span>
             <div class='star-btn'>
@@ -152,6 +153,7 @@
               <span class='star-count'>0</span>
             </div>
           </div>
+        <% end %>
         </div>
         <% end %>
       </li>

@@ -1,6 +1,4 @@
 <%= render "shared/header" %>
-
-
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
@@ -23,20 +21,15 @@
       </span>
     </div>
 
-
     <% if user_signed_in? %>
       <% if current_user == @item.user%>
         <%= link_to "商品の編集", edit_item_path, method: :get, class: "item-red-btn" %>
         <p class="or-text">or</p>
-        <%= link_to "削除", "#", method: :delete, class:"item-destroy" %>
+        <%= link_to "削除", item_path(@item.id), method: :delete, class:"item-destroy" %>
       <% else %>
-
         <%= link_to "購入画面に進む", "#" ,class:"item-red-btn"%>
-
       <% end %>
     <% end %>
-
-
 
     <div class="item-explain-box">
       <span><%= @item.description_of_item %></span>
@@ -104,9 +97,6 @@
       後ろの商品 ＞
     </a>
   </div>
-
   <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
-
 </div>
-
 <%= render "shared/footer" %>

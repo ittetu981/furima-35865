@@ -35,7 +35,7 @@
 - has_one :purchase
 - belongs_to :user
 
-## orderテーブル
+## ordersテーブル
 
 |Column                 |Type      |Options                      |
 |-----------------------|----------|-----------------------------|
@@ -48,7 +48,7 @@
 - belongs_to :item
 
 
-## shipping_addressテーブル
+## shipping_addressesテーブル
 
 |Column                 |Type      |Options                      |
 |-----------------------|----------|-----------------------------|

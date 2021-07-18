@@ -9,7 +9,7 @@ class ShipmentSource < ActiveHash::Base
     { id: 7, name: '山形' },
     { id: 8, name: '福島' },
     { id: 9, name: '茨城' },
-    { id: 10, name: '茨城' },
+    { id: 10, name: '栃木' },
     { id: 11, name: '群馬' },
     { id: 12, name: '埼玉' },
     { id: 13, name: '千葉' },
@@ -51,5 +51,5 @@ class ShipmentSource < ActiveHash::Base
   ]
   include ActiveHash::Associations
   has_many :items
-
+  has_many :orders
 end

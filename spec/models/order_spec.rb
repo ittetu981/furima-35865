@@ -7,54 +7,35 @@ RSpec.describe Order, type: :model do
     end
   
     context '内容に問題ない場合' do
-      it "priceとtokenがあれば保存ができること" do
+      it "カード番号と有効期限とセキュリティコードがあれば購入ができること" do
         expect(@order).to be_valid
       end
-
-      it "postal_codetとshipment_source_id,municipality,addressとphone_numberがあれば保存ができること" do
-        expect(@order).to be_valid
     end
-  
+
     context '内容に問題がある場合' do
-      it "priceが空では保存ができないこと" do
-        @order.price = nil
+      it "カード番号が空では購入ができないこと" do
+        @order.number = ''
         @order.valid?
-        expect(@order.errors.full_messages).to include("Postal code can't be blank")
+        expect(@order.errors.full_messages).to include("Number can't be blank")
       end
   
-      it "tokenが空では登録できないこと" do
-        @order.token = nil
+      it "exp_monthが空では購入できないこと" do
+        @order.token = ''
         @order.valid?
-        expect(@order.errors.full_messages).to include("Token can't be blank")
+        expect(@order.errors.full_messages).to include("Exp month can't be blank")
       end
 
-      it "postal_codeが空では購入できないこと" do
-        @order.postal_code = ''
+      it "exp_yearが空では購入できないこと" do
+        @order.token = ''
         @order.valid?
-        expect(@order.errors.full_messages).to include("Postal code can't be blank")
+        expect(@order.errors.full_messages).to include("Exp year can't be blank")
       end
 
-      it "shipment_source_idが空では購入できないこと" do
-        @order.shipment_source_id = ''
+      it "セキュリティコードが空では購入できないこと" do
+        @order.token = ''
         @order.valid?
-        expect(@order.errors.full_messages).to include("Shipment source can't be blank")
+        expect(@order.errors.full_messages).to include("Cvc can't be blank")
       end
-
-      it "municipalityが空では購入できないこと" do
-        @order.municipality = ''
-        @order.valid?
-        expect(@order.errors.full_messages).to include("Municipality can't be blank")
-      end
-
-      it "addressが空では購入できないこと" do
-        @order.address = ''
-        @order.valid?
-        expect(@order.errors.full_messages).to include("Address can't be blank")
-      end
-
-      it "phone_numberが空では購入できないこと" do
-        @order.phone_number = ''
-        @order.valid?
-        expect(@order.errors.full_messages).to include("Phone number can't be blank")
     end
+  end
 end

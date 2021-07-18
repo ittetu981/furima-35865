@@ -1,6 +1,8 @@
 FactoryBot.define do
   factory :order do
-    price {3000}
-    token {whook_c27f3b87075e749a763b0995da}
+    number {4242424242424242}
+    exp_month {9}
+    exp_year {99}
+    cvc {123}
   end
 end

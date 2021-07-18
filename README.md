@@ -35,7 +35,7 @@
 - has_one :purchase
 - belongs_to :user
 
-## purchasesテーブル
+## orderテーブル
 
 |Column                 |Type      |Options                      |
 |-----------------------|----------|-----------------------------|

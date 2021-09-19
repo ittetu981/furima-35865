@@ -22,6 +22,10 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
+  ActionCable.server.config.disable_request_forgery_protection = true
+  config.action_cable.url = "wss://FURIMA-35865.herokuapp.com/cable" 
+  config.action_cable.allowed_request_origins = ['https://FURIMA-35865.herokuapp.com', 'http://FURIMA-35865.herokuapp.com']
+
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
